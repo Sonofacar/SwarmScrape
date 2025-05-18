@@ -1,0 +1,12 @@
+[Unit]
+Description=A pooled proxy server designed for simple web scraping.
+After=network.target
+Wants=network.target
+
+[Service]
+Type=exec
+Restart=on-failure
+ExecStart=/usr/bin/SwarmScrape
+
+[Install]
+WantedBy=multi-user.target
